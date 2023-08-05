@@ -96,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     winstr = "      O has WON";
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            gameReset(view);
+                        }
+                    }, 2000);
                 }
                 //Display the winner on statusbar(textview)
                 TextView status = findViewById(R.id.status);
